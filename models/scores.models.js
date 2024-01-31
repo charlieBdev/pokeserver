@@ -3,7 +3,10 @@ const db = require('../db/connection');
 exports.selectScores = async () => {
 	try {
 		const scores = await db.query(`
-      SELECT * FROM scores;`);
+      SELECT * FROM scores
+			ORDER BY score DESC
+			LIMIT 10;
+		`);
 		return scores.rows;
 	} catch (e) {
 		console.error('Error retrieving scores:', e);
