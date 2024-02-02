@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS scores;
+
+CREATE TABLE scores (
+  id SERIAL PRIMARY KEY,
+  playername VARCHAR(12) NOT NULL,
+  score INT NOT NULL
+);

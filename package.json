@@ -4,7 +4,8 @@
 	"description": "",
 	"main": "listen.js",
 	"scripts": {
-		"setup-dbs": "psql -f ./db/setup.sql",
+		"setup-db": "psql -f ./db/setup.sql",
+		"setup-table": "psql -f ./db/scores.sql",
 		"dev": "nodemon listen.js",
 		"start": "node listen.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
